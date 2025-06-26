@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
   HomeIcon,
@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const SlideTabs = () => {
-  const [selectedTab, setSelectedTab] = useState(null);
+  const [selectedTab, setSelectedTab] = useState("Home");
   const [hoveredTab, setHoveredTab] = useState(null);
 
   const [selectedPosition, setSelectedPosition] = useState({
@@ -25,6 +25,19 @@ const SlideTabs = () => {
   });
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Initialize cursor position for Home tab
+  useEffect(() => {
+    const homeTab = document.querySelector('[data-tab="Home"]');
+    if (homeTab) {
+      const { offsetLeft, offsetWidth } = homeTab;
+      setSelectedPosition({
+        left: offsetLeft,
+        width: offsetWidth,
+        opacity: 1,
+      });
+    }
+  }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => !prev);
@@ -186,7 +199,7 @@ const Cursor = ({ position, isDarkMode, isHovering }) => {
 
 const Navbar = () => {
   return (
-    <div className="py-20">
+    <div className="py-10">
       <SlideTabs />
     </div>
   );
