@@ -6,17 +6,17 @@
 /* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
   /* Primary Colors (Lime Green variants) */
-  --color-primary-50: #f7fee7;
-  --color-primary-100: #ecfccb;
-  --color-primary-200: #d9f99d;
-  --color-primary-300: #bef264;
-  --color-primary-400: #a3e635;
-  --color-primary-500: #84cc16;
-  --color-primary-600: #65a30d;
-  --color-primary-700: #4d7c0f;
-  --color-primary-800: #365314;
-  --color-primary-900: #1a2e05;
-  --color-primary: #32cd32;
+  --color-primary-50: #f8ffe6;
+  --color-primary-100: #efffc9;
+  --color-primary-200: #ddff99;
+  --color-primary-300: #c4ff5e;
+  --color-primary-400: #b7ff2f;
+  --color-primary-500: #aefe14;
+  --color-primary-600: #9ae00c;
+  --color-primary-700: #7ab80e;
+  --color-primary-800: #629012;
+  --color-primary-900: #527815;
+  --color-primary: #aefe14;
 
   /* Secondary Colors (Indigo/Purple variants) */
   --color-secondary-50: #eef2ff;
@@ -71,17 +71,17 @@
   --color-neutral-900: #171717;
 
   /* Text Colors */
-  --text-light: #1a1a1a;
-  --text-dark: #f5f5f5;
-  --text-muted: #6b7280;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
+  --color-text-light: #f5f5f5;
+  --color-text-dark: #1a1a1a;
+  --color-text-muted: #6b7280;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
 
   /* Background Colors */
-  --bg-light: #ffffff;
-  --bg-dark: #0f172a;
-  --bg-muted: #f8fafc;
-  --bg-accent: #f1f5f9;
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #0f172a;
+  --color-bg-muted: #f8fafc;
+  --color-bg-accent: #f1f5f9;
 
   /* Border Colors */
   --color-border-light: #e2e8f0;
