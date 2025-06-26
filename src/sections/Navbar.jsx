@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "motion/react";
+import useDarkMode from "../hooks/useDarkMode";
 import {
   HomeIcon,
   UserIcon,
@@ -24,7 +25,7 @@ const SlideTabs = () => {
     opacity: 0,
   });
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const isDarkMode = useDarkMode();
 
   // Initialize cursor position for Home tab
   useEffect(() => {
@@ -40,7 +41,6 @@ const SlideTabs = () => {
   }, []);
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
     document.documentElement.classList.toggle("dark");
     setHoveredTab(null);
     setHoverPosition({ left: 0, width: 0, opacity: 0 });
@@ -198,8 +198,37 @@ const Cursor = ({ position, isDarkMode, isHovering }) => {
 };
 
 const Navbar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        // Scrolling up or near top - show navbar
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and not near top - hide navbar
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="py-10">
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 py-10 transition-transform duration-300 ease-in-out bg-transparent ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <SlideTabs />
     </div>
   );

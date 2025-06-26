@@ -15,7 +15,7 @@ const HeroText = () => {
       {/* Desktop View */}
       <div className={"flex-col hidden md:flex c-space"}>
         <motion.h1
-          className="text-5xl font-medium pl-1 mb-2"
+          className="text-5xl font-medium pl-1 mb-30"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -61,9 +61,9 @@ const HeroText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex flex-col space-y-2 md:hidden -mt-10">
+      <div className="flex flex-col space-y-2 md:hidden -mt-4">
         <motion.p
-          className="text-3xl font-medium"
+          className="text-3xl font-medium mb-10"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -98,7 +98,7 @@ const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-3xl font-medium mt-1"
+            className="text-3xl font-medium mt-1 text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
