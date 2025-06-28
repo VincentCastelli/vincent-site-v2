@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import Card from "../components/Card";
+import CopyEmailButton from "../components/CopyEmailButton";
 
 const About = () => {
   const isDarkMode = useDarkMode();
@@ -106,14 +107,21 @@ const About = () => {
               I'm based in the San Francisco Bay Area, California, USA
             </p>
             <img
-              className="absolute left-[32%] top-[0] scale-x-[-1] md:left-[20%] md:top-[-38%] scale-80 rotate-[-1deg]"
+              className="absolute opacity-85 left-[32%] top-[0] scale-x-[-1] md:left-[20%] md:top-[-38%] scale-80 rotate-[-1deg]"
               src="assets/location.png"
               alt="location"
             />
           </div>
         </div>
         {/* Grid 4 */}
-        <div className="grid-black-color grid-4"></div>
+        <div className="grid-black-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center mt-2 mb-2 text-2xl md:text-4xl font-semibold text-bg-light">
+              Do you want to work together?
+            </p>
+            <CopyEmailButton />
+          </div>
+        </div>
         {/* Grid 5 */}
         <div className="grid-primary-color grid-5"></div>
       </div>
