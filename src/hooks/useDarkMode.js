@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 
 const useDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     // Function to check if dark mode is active
     const checkDarkMode = () => {
       setIsDarkMode(document.documentElement.classList.contains("dark"));
     };
+
+    // Set dark mode as default if no class is present
+    if (!document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.add("dark");
+    }
 
     // Check initial state
     checkDarkMode();

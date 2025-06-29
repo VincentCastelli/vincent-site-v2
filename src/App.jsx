@@ -1,6 +1,7 @@
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Experience from "./sections/Experience";
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       <div className="container mx-auto max-w-7xl pt-20">
         <Hero />
         <About />
-        {/* Experience */}
+        <Experience />
         {/* Contact */}
         {/* Footer */}
       </div>

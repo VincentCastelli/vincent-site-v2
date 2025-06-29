@@ -2,6 +2,7 @@ import { useRef } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import Card from "../components/Card";
 import CopyEmailButton from "../components/CopyEmailButton";
+import Frameworks from "../components/Frameworks";
 
 const About = () => {
   const isDarkMode = useDarkMode();
@@ -19,7 +20,7 @@ const About = () => {
             alt="Coding POV"
           />
           <div className="z-10 md:mb-10">
-            <p className="headertext">
+            <p className="mt-2 mb-2 text-2xl md:text-4xl font-semibold text-bg-light">
               {"Hi, I am"}{" "}
               <span className={isDarkMode ? "text-primary" : "text-tertiary"}>
                 Vincent Castelli
@@ -102,7 +103,9 @@ const About = () => {
         {/* Grid 3 */}
         <div className="grid-default-color grid-3">
           <div className="z-10 w-[80%] md:w-[60%]">
-            <p className="headertext">Location</p>
+            <p className="mt-2 mb-2 text-2xl md:text-4xl font-semibold text-bg-light">
+              Location
+            </p>
             <p className="subtext">
               I'm based in the San Francisco Bay Area, California, USA
             </p>
@@ -123,7 +126,21 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-primary-color grid-5"></div>
+        <div className="grid-primary-color grid-5">
+          <div className="z-10 w-[50%]">
+            <p className="mt-2 mb-2 text-2xl md:text-4xl font-semibold text-bg-dark">
+              Tech Stack
+            </p>
+            <p className="text-neutral-700 text-sm font-light md:text-base text-pretty">
+              I have experience with a wide range of technologies, including
+              React, TypeScript, Node.js, and more. I am always eager to learn
+              new tools and frameworks to enhance my skill set.
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
+        </div>
       </div>
     </section>
   );

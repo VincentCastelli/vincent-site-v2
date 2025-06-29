@@ -22,7 +22,7 @@ const CopyEmailButton = () => {
       {/* Popup notification */}
       {showPopup && (
         <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-primary text-bg-dark px-3 py-2 rounded-lg text-sm font-medium shadow-lg z-10 animate-bounce">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-[8rem]">
             <CheckIcon className="size-4" />
             Email copied!
           </div>
