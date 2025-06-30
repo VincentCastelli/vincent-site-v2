@@ -1,8 +1,11 @@
+import Timeline from "../components/Timeline";
+import { experiences } from "../constants";
+
 const Experience = () => {
   return (
-    <section id="experience" className="c-space section-spacing">
-      <h2 className="text-heading">Work Experience</h2>
-    </section>
+    <div className="w-full">
+      <Timeline data={experiences} />
+    </div>
   );
 };
 

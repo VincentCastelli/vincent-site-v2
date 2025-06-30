@@ -4,7 +4,15 @@ import FlipWords from "./FlipWords";
 
 const HeroText = () => {
   const isDarkMode = useDarkMode();
-  const words = ["Responsive", "Streamlined", "Engaging", "Enjoyable"];
+  const words = [
+    "Responsive",
+    "Streamlined",
+    "Engaging",
+    "Enjoyable",
+    "Intuitive",
+    "Accessible",
+    "Consistent",
+  ];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },

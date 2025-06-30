@@ -2,6 +2,7 @@ import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         <Hero />
         <About />
         <Experience />
-        {/* Contact */}
+        <Contact />
         {/* Footer */}
       </div>
     </>
