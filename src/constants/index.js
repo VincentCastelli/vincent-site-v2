@@ -59,3 +59,16 @@ export const experiences = [
     ],
   },
 ];
+
+export const mySocials = [
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/vincent-castelli-42366146/",
+    icon: "/assets/socials/linkedIn.svg",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/VincentCastelli",
+    icon: "/assets/socials/github.svg",
+  },
+];

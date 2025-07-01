@@ -254,3 +254,13 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+/* Social Icon Filters */
+.social-icon {
+  filter: brightness(0) saturate(100%);
+  transition: filter 0.3s ease;
+}
+
+.dark .social-icon {
+  filter: brightness(0) invert(100%);
+}

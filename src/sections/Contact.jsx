@@ -37,9 +37,9 @@ const Contact = () => {
         "template_17us8im",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Vincent",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "vincentsalvatorecastelli@gmail.com",
           message: formData.message,
         },
         "pn-Bw_mS1_QQdofuV"
@@ -55,7 +55,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative flex c-space section-spacing">
+    <section
+      id="contact"
+      className="relative flex c-space mb-20 mt-30 md:mb-50 md:mt-50"
+    >
       <div className="flex flex-col items-center md:max-w-3/5 px-10 py-10 mx-auto border border-white/10 rounded-2xl bg-bg-dark">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="font-bold text-3xl md:text-4xl text-bg-light">
@@ -67,7 +70,7 @@ const Contact = () => {
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="mb-5">
+          <div className="mb-8">
             <label htmlFor="name" className="feild-label">
               Full Name
             </label>
@@ -83,7 +86,7 @@ const Contact = () => {
               required
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-8">
             <label htmlFor="email" className="feild-label">
               Email
             </label>
@@ -99,7 +102,7 @@ const Contact = () => {
               required
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-8">
             <label htmlFor="message" className="feild-label">
               Message
             </label>
@@ -118,9 +121,9 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 mb-5 text-lg text-center rounded-md cursor-pointer bg-radial from-secondary to-violet-900 hover-animation text-bg-light"
           >
-            {!isLoading ? "Send" : "Sending..."}
+            {!isLoading ? "SEND" : "SENDING..."}
           </button>
         </form>
       </div>
