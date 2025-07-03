@@ -205,6 +205,20 @@ body {
   @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary-500 w-[12rem] cursor-pointer overflow-hidden;
 }
 
+/* Button Gradients */
+.btn-radial-primary {
+  background: radial-gradient(
+    circle,
+    var(--color-primary-500),
+    var(--color-primary-600),
+    var(--color-primary-800)
+  );
+}
+
+.btn-radial-secondary {
+  background: radial-gradient(circle, var(--color-secondary), #4f46e5, #581c87);
+}
+
 /* About Section */
 .grid-1 {
   @apply row-span-2 md:col-span-3 h-[16rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;

@@ -30,7 +30,7 @@ const Timeline = ({ data }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: isMobile ? ["start 20%", "end 75%"] : ["start 20%", "end 60%"],
+    offset: isMobile ? ["start 70%", "end 20%"] : ["start 20%", "end 60%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
