@@ -4,5 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   base: "/vincent-site-v2/",
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+  },
   plugins: [react(), tailwindcss()],
 });
