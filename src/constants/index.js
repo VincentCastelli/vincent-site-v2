@@ -1,3 +1,6 @@
+import linkedInIcon from "../assets/socials/linkedIn.svg";
+import githubIcon from "../assets/socials/github.svg";
+
 export const experiences = [
   {
     title: "Founding Engineer",
@@ -64,11 +67,11 @@ export const mySocials = [
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/vincent-castelli-42366146/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: linkedInIcon,
   },
   {
     name: "GitHub",
     href: "https://github.com/VincentCastelli",
-    icon: "/assets/socials/github.svg",
+    icon: githubIcon,
   },
 ];
