@@ -1,6 +1,5 @@
 import useDarkMode from "../hooks/useDarkMode";
 import { useState, useEffect } from "react";
-import gridImage from "../assets/grid.png";
 
 const GridPatternBg = () => {
   const isDarkMode = useDarkMode();
@@ -23,7 +22,9 @@ const GridPatternBg = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url('${gridImage}')`,
+            backgroundImage: `url('${
+              import.meta.env.BASE_URL
+            }assets/grid.png')`,
             backgroundSize: isMobile ? "800px 500px" : "1600px 1000px",
             backgroundPosition: isMobile ? "center -80px" : "center -140px",
             backgroundRepeat: "no-repeat",
