@@ -22,9 +22,7 @@ const GridPatternBg = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url('${
-              import.meta.env.BASE_URL
-            }assets/grid.png')`,
+            backgroundImage: `url('/vincent-site-v2/assets/grid.png')`,
             backgroundSize: isMobile ? "800px 500px" : "1600px 1000px",
             backgroundPosition: isMobile ? "center -80px" : "center -140px",
             backgroundRepeat: "no-repeat",
