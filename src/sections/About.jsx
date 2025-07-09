@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex items-end grid-default-color grid-1">
           <img
             className="absolute scale-[1.4] -top-[1rem] opacity-40 md:opacity-80 md:scale-[3] md:left-20 md:inset-y-6 lg:scale-[1.5]"
-            src="/vincent-site-v2/assets/coding-pov.png"
+            src="./assets/coding-pov.png"
             alt="Coding POV"
           />
           <div className="z-10 md:mb-10">
@@ -111,7 +111,7 @@ const About = () => {
             </p>
             <img
               className="absolute opacity-85 left-[32%] top-[0] scale-x-[-1] md:left-[20%] md:top-[-38%] scale-80 rotate-[-1deg]"
-              src="/vincent-site-v2/assets/location.png"
+              src="./assets/location.png"
               alt="location"
             />
           </div>

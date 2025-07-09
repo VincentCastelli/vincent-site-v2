@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/vincent-site-v2/",
+  base: "./",
   build: {
     outDir: "dist",
     assetsDir: "assets",
