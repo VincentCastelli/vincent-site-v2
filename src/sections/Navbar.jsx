@@ -47,11 +47,26 @@ const SlideTabs = () => {
   };
 
   const navItems = [
-    { name: "Home", icon: HomeIcon },
-    { name: "About", icon: UserIcon },
-    { name: "Experience", icon: BriefcaseIcon },
-    { name: "Contact", icon: EnvelopeIcon },
+    { name: "Home", icon: HomeIcon, sectionId: "hero" },
+    { name: "About", icon: UserIcon, sectionId: "about" },
+    { name: "Experience", icon: BriefcaseIcon, sectionId: "experience" },
+    { name: "Contact", icon: EnvelopeIcon, sectionId: "contact" },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const elementPosition = element.offsetTop;
+      // Apply offset only for about and experience sections
+      const needsOffset = sectionId === "about" || sectionId === "experience";
+      const offsetPosition = needsOffset ? elementPosition - 100 : elementPosition;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <ul
@@ -67,12 +82,14 @@ const SlideTabs = () => {
           key={item.name}
           name={item.name}
           icon={item.icon}
+          sectionId={item.sectionId}
           isDarkMode={isDarkMode}
           isSelected={selectedTab === item.name}
           setSelectedTab={setSelectedTab}
           setHoveredTab={setHoveredTab}
           setSelectedPosition={setSelectedPosition}
           setHoverPosition={setHoverPosition}
+          scrollToSection={scrollToSection}
         >
           {item.name}
         </Tab>
@@ -118,6 +135,8 @@ const Tab = ({
   isToggle = false,
   name,
   onClick,
+  sectionId,
+  scrollToSection,
   setSelectedTab,
   setHoveredTab,
   setSelectedPosition,
@@ -133,7 +152,12 @@ const Tab = ({
   };
 
   const handleClick = () => {
-    if (onClick) onClick();
+    if (onClick) {
+      onClick();
+    } else if (sectionId && scrollToSection) {
+      scrollToSection(sectionId);
+    }
+
     if (!isToggle) {
       setSelectedTab(name);
       if (ref?.current) {
